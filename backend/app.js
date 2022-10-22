@@ -3,6 +3,7 @@ const cookieParser = require("cookie-parser");
 const logger = require("morgan");
 
 const cors = require("cors");
+const csurf = require("csurf");
 const { isProduction } = require("./config/keys");
 
 const usersRouter = require("./routes/api/users");
@@ -18,6 +19,16 @@ app.use(cookieParser());
 if (!isProduction) {
   app.use(cors());
 }
+
+app.use(
+  csurf({
+    cookie: {
+      secure: isProduction,
+      sameSite: isProduction && "Lax",
+      httpOnly: true,
+    },
+  })
+);
 
 app.use("/api/users", usersRouter);
 app.use("/api/tweets", tweetsRouter);
