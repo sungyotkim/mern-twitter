@@ -10,7 +10,7 @@ const handleValidationErrors = (req, res, next) => {
     const errorFormatter = ({ msg }) => msg;
     const errors = validationErrors.formatWith(errorFormatter).mapped();
 
-    const err = Error("Validation Error");
+    const err = new Error("Validation Error");
     err.errors = errors;
     err.statusCode = 400;
     err.title = "Validation Error";
