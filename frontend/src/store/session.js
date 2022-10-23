@@ -1,4 +1,4 @@
-import { startSession } from "../../backend/models/Tweet";
+import { startSession } from "../../../backend/models/Tweet";
 import jwtFetch from "./jwt";
 
 const RECEIVE_CURRENT_USER = "session/RECEIVE_CURRENT_USER";
