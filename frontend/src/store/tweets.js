@@ -60,7 +60,7 @@ export const fetchUserTweets = (id) => async (dispatch) => {
 
 export const composeTweet = (data) => async (dispatch) => {
   try {
-    const res = await jwtFetch("/api/tweets/", {
+    const res = await jwtFetch("/api/tweets", {
       method: "POST",
       body: JSON.stringify(data),
     });

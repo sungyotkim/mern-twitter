@@ -6,8 +6,8 @@ import tweets from "./tweets";
 
 const rootReducer = combineReducers({
   session,
-  errors,
   tweets,
+  errors,
 });
 
 let enhancer;

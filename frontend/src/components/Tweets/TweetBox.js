@@ -1,4 +1,4 @@
-const TweetBos = ({ text, username }) => {
+const TweetBox = ({ text, username }) => {
   return (
     <>
       <div className="tweet">
@@ -10,4 +10,4 @@ const TweetBos = ({ text, username }) => {
   );
 };
 
-export default TweetBos;
+export default TweetBox;
