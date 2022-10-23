@@ -9,6 +9,8 @@ import Profile from "./components/Profile/Profile";
 import TweetCompose from "./components/Tweets/TweetCompose";
 
 import { getCurrentUser } from "./store/session";
+import { useEffect, useState } from "react";
+import { useDispatch } from "react-redux";
 
 function App() {
   const [loaded, setLoaded] = useState(false);
